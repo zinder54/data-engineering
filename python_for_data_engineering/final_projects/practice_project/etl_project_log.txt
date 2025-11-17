@@ -1,0 +1,14 @@
+2025-11-11-19:22:10: Declaring Known Values 
+2025-11-11-19:22:10: Preliminaries complete. Initiating ETL process. 
+2025-11-11-19:22:10: starting date extraction 
+2025-11-11-19:22:16: Data extraction complete. Initiating Transformation process. 
+2025-11-11-19:22:16: Starting Data transformation 
+2025-11-11-19:22:16: Data transformation complete. Initiating loading process. 
+2025-11-11-19:22:16: Loading data to csv file 
+2025-11-11-19:22:16: Data saved to CSV file. 
+2025-11-11-19:22:16: Connecting to database 
+2025-11-11-19:22:16: SQL Connection initiated. 
+2025-11-11-19:22:16: Loading data to database 
+2025-11-11-19:22:16: Data loaded to Database as table. Running the query. 
+2025-11-11-19:22:16: Sending query to databse 
+2025-11-11-19:22:16: Process Complete. 
