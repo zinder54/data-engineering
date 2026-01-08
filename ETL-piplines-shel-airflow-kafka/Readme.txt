@@ -1,0 +1,2 @@
+in these folder are the first DAGS for airflow that i created on the ibm data engineering certification - course called ETL and piplines with shell,airflow and kafka.
+the ETL_Server_access_logs.py in each folder are a self lead practice assignment.
