@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<!-- saved from url=(0107)https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>hospitals: hospitals: 6,501 rows</title>
+    <link rel="stylesheet" href="./file-name_files/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./file-name_files/main.2acbb312.css">
+
+
+    <script type="module" src="./file-name_files/datasette-cluster-map.js.download"></script>
+
+    <script src="./file-name_files/main.08f5d3d8.js.download"></script>
+<link rel="alternate" type="application/json+datasette" href="http://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals.json"><script src="./file-name_files/table.js.download" defer=""></script>
+<script>DATASETTE_ALLOW_FACET = true;</script>
+<style>
+@media only screen and (max-width: 576px) {
+.rows-and-columns td:nth-of-type(1):before { content: "Link"; }
+.rows-and-columns td:nth-of-type(2):before { content: "rowid"; }
+.rows-and-columns td:nth-of-type(3):before { content: "id"; }
+.rows-and-columns td:nth-of-type(4):before { content: "name"; }
+.rows-and-columns td:nth-of-type(5):before { content: "city"; }
+.rows-and-columns td:nth-of-type(6):before { content: "state"; }
+.rows-and-columns td:nth-of-type(7):before { content: "lon"; }
+.rows-and-columns td:nth-of-type(8):before { content: "lat"; }
+}
+</style>
+<link rel="stylesheet" href="./file-name_files/leaflet-v1.7.1.css"><link rel="stylesheet" href="./file-name_files/leaflet.markercluster.css"><style><br>dl.cluster-map-dl {<br>    font-size: 1.1em;<br>}<br>dl.cluster-map-dl dt {<br>    font-weight: bold;<br>}<br>dl.cluster-map-dl dd {<br>    margin: 0px 0 0 0.7em;<br>}<br>dl.cluster-map-dl dd span {<br>    color: #aaa;<br>    font-size: 0.8em;<br>}<br>button.cluster-map-button {<br>    color: #fff;<br>    background-color: #007bff;<br>    border-color: #007bff;<br>    vertical-align: middle;<br>    cursor: pointer;<br>    border: 1px solid blue;<br>    padding: 0.3em 0.8em;<br>    font-size: 0.6rem;<br>    line-height: 1;<br>    border-radius: .25rem;<br>}<br></style></head>
+<body class="table db-hospitals table-hospitals">
+<div class="not-footer">
+<header><nav>
+
+  
+  
+    <p class="crumbs">
+      
+        <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/">home</a>
+        
+          /
+        
+      
+        <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals">hospitals</a>
+        
+      
+    </p>
+  
+
+
+    
+    <details class="nav-menu">
+        <summary><svg aria-labelledby="nav-menu-svg-title" role="img" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                <title id="nav-menu-svg-title">Menu</title>
+                <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+        </svg></summary>
+        <div class="nav-menu-inner">
+            
+            <ul>
+                
+                <li><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/-/add-datasets">Add Datasets</a></li>
+                
+                <li><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/-/databases">Databases</a></li>
+                
+                <li><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/-/plugins">Installed plugins</a></li>
+                
+                <li><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/-/versions">Version info</a></li>
+                
+                <li><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/-/metadata">Metadata</a></li>
+                
+                <li><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/-/settings">Settings</a></li>
+                
+                <li><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/-/permissions">Debug permissions</a></li>
+                
+                <li><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/-/messages">Debug messages</a></li>
+                
+                <li><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/-/allow-debug">Debug allow rules</a></li>
+                
+                <li><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/-/threads">Debug threads</a></li>
+                
+                <li><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/-/actor">Debug actor</a></li>
+                
+                <li><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/-/patterns">Pattern portfolio</a></li>
+                
+            </ul>
+            
+            
+        </div>
+    </details>
+    
+</nav></header>
+
+
+
+    
+
+
+
+<section class="content">
+
+<div class="page-header" style="border-color: #ff0000">
+    <h1>hospitals</h1>
+    
+</div>
+
+
+
+
+
+
+
+    <h3>6,501 rows
+        
+    </h3>
+
+
+<form class="filters" action="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals" method="get">
+    
+    
+    <div class="filter-row">
+        <div class="select-wrapper">
+            <select name="_filter_column">
+                <option value="">- column -</option>
+                
+                      <option>rowid</option>
+                
+                      <option>id</option>
+                
+                      <option>name</option>
+                
+                      <option>city</option>
+                
+                      <option>state</option>
+                
+                      <option>lon</option>
+                
+                      <option>lat</option>
+                
+            </select>
+        </div><div class="select-wrapper filter-op">
+            <select name="_filter_op">
+                
+                    <option value="exact">=</option>
+                
+                    <option value="not">!=</option>
+                
+                    <option value="contains">contains</option>
+                
+                    <option value="endswith">ends with</option>
+                
+                    <option value="startswith">starts with</option>
+                
+                    <option value="gt">&gt;</option>
+                
+                    <option value="gte">≥</option>
+                
+                    <option value="lt">&lt;</option>
+                
+                    <option value="lte">≤</option>
+                
+                    <option value="like">like</option>
+                
+                    <option value="notlike">not like</option>
+                
+                    <option value="glob">glob</option>
+                
+                    <option value="in">in</option>
+                
+                    <option value="notin">not in</option>
+                
+                    <option value="arraycontains">array contains</option>
+                
+                    <option value="arraynotcontains">array does not contain</option>
+                
+                    <option value="date">date</option>
+                
+                    <option value="isnull__1">is null</option>
+                
+                    <option value="notnull__1">is not null</option>
+                
+                    <option value="isblank__1">is blank</option>
+                
+                    <option value="notblank__1">is not blank</option>
+                
+            </select>
+        </div><input type="text" name="_filter_value" class="filter-value">
+    <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals#" aria-label="Remove this filter" style="text-decoration: none; display: none;">✖</a></div>
+    <div class="filter-row">
+        
+            <div class="select-wrapper small-screen-only">
+                <select name="_sort" id="sort_by">
+                    <option value="">Sort...</option>
+                    
+                        
+                    
+                        
+                            <option value="rowid" selected="">Sort by rowid</option>
+                        
+                    
+                        
+                            <option value="id">Sort by id</option>
+                        
+                    
+                        
+                            <option value="name">Sort by name</option>
+                        
+                    
+                        
+                            <option value="city">Sort by city</option>
+                        
+                    
+                        
+                            <option value="state">Sort by state</option>
+                        
+                    
+                        
+                            <option value="lon">Sort by lon</option>
+                        
+                    
+                        
+                            <option value="lat">Sort by lat</option>
+                        
+                    
+                </select>
+            </div>
+            <label class="sort_by_desc small-screen-only"><input type="checkbox" name="_sort_by_desc"> descending</label>
+        
+        
+        <input type="submit" value="Apply">
+    </div>
+</form>
+
+
+
+
+    <p><a class="not-underlined" title="select rowid, id, name, city, state, lon, lat from hospitals order by rowid limit 101" href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals?sql=select+rowid%2C+id%2C+name%2C+city%2C+state%2C+lon%2C+lat+from+hospitals+order+by+rowid+limit+101">✎ <span class="underlined">View and edit SQL</span></a></p>
+
+
+<p class="export-links">This data as <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals.json">json</a>, <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals.csv?_size=max">CSV</a> (<a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals#export">advanced</a>)</p>
+
+
+
+
+
+
+
+
+<div class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="width: 100%; height: 500px; position: relative; outline: none;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-336px, 47px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(495px, 188px, 0px) scale(0.5);"></div><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 19; transform: translate3d(330px, 125px, 0px) scale(1);"><img alt="" role="presentation" src="./file-name_files/3.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(196px, -12px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/4.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(196px, 244px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/3(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-60px, -12px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/3(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(452px, -12px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/4(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-60px, 244px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/4(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(452px, 244px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/2.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(196px, -268px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/2(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-60px, -268px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/2(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(452px, -268px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/3(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-316px, -12px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/3(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(708px, -12px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/2(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-316px, -268px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/2(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(708px, -268px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/4(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-316px, 244px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/4(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(708px, 244px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/3(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-572px, -12px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/3(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(964px, -12px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/2(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-572px, -268px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/2(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(964px, -268px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/4(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-572px, 244px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/4(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(964px, 244px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/3(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1220px, -12px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/2(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1220px, -268px, 0px); opacity: 1;"><img alt="" role="presentation" src="./file-name_files/4(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1220px, 244px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"><img src="./file-name_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(1174px, 262px, 0px);"><img src="./file-name_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(2373px, 292px, 0px);"></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="1583" height="600" viewBox="204 -97 1583 600" style="transform: translate3d(204px, -97px, 0px);"><g></g></svg></div><div class="leaflet-pane leaflet-marker-pane"><img src="./file-name_files/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(1174px, 262px, 0px); z-index: 262;"><div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(660px, 250px, 0px); z-index: 250; opacity: 1;"><div><span>2</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(917px, 65px, 0px); z-index: 65; opacity: 1;"><div><span>67</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-large leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(867px, 147px, 0px); z-index: 147; opacity: 1;"><div><span>109</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(862px, 70px, 0px); z-index: 70; opacity: 1;"><div><span>21</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(1003px, 69px, 0px); z-index: 69; opacity: 1;"><div><span>3</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(1127px, 106px, 0px); z-index: 106; opacity: 1;"><div><span>86</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(926px, 167px, 0px); z-index: 167; opacity: 1;"><div><span>29</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(951px, 110px, 0px); z-index: 110; opacity: 1;"><div><span>77</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(1086px, 201px, 0px); z-index: 201; opacity: 1;"><div><span>53</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-large leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(1043px, 100px, 0px); z-index: 100; opacity: 1;"><div><span>111</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-large leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(1104px, 130px, 0px); z-index: 130; opacity: 1;"><div><span>148</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(1014px, 175px, 0px); z-index: 175; opacity: 1;"><div><span>82</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-large leaflet-zoom-animated leaflet-interactive" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(1061px, 154px, 0px); z-index: 154; opacity: 1;"><div><span>210</span></div></div><img src="./file-name_files/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(2373px, 292px, 0px); z-index: 292;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(469.5px, 858px, 0px) scale(4);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</div></div></div></div><div style="margin-bottom: 2em;">Showing 1,000 of 6,501 (15.38%) <button class="cluster-map-button">load all</button></div><div class="table-wrapper">
+    <div><div class="datasette-vega-inactive"><button>Show charting options</button></div></div><table class="rows-and-columns">
+        <thead>
+            <tr>
+                
+                    <th class="col-Link" scope="col" data-column="Link" data-column-type="" data-column-not-null="0" data-is-pk="0">
+                        
+                            Link
+                        
+                    </th>
+                
+                    <th class="col-rowid" scope="col" data-column="rowid" data-column-type="integer" data-column-not-null="0" data-is-pk="1">
+                        
+                            
+                                <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals?_sort_desc=rowid" rel="nofollow">rowid&nbsp;▼</a>
+                            
+                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-menu-icon">
+  <circle cx="12" cy="12" r="3"></circle>
+  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+</svg></th>
+                
+                    <th class="col-id" scope="col" data-column="id" data-column-type="integer" data-column-not-null="0" data-is-pk="0">
+                        
+                            
+                                <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals?_sort=id" rel="nofollow">id</a>
+                            
+                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-menu-icon">
+  <circle cx="12" cy="12" r="3"></circle>
+  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+</svg></th>
+                
+                    <th class="col-name" scope="col" data-column="name" data-column-type="text" data-column-not-null="0" data-is-pk="0">
+                        
+                            
+                                <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals?_sort=name" rel="nofollow">name</a>
+                            
+                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-menu-icon">
+  <circle cx="12" cy="12" r="3"></circle>
+  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+</svg></th>
+                
+                    <th class="col-city" scope="col" data-column="city" data-column-type="text" data-column-not-null="0" data-is-pk="0">
+                        
+                            
+                                <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals?_sort=city" rel="nofollow">city</a>
+                            
+                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-menu-icon">
+  <circle cx="12" cy="12" r="3"></circle>
+  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+</svg></th>
+                
+                    <th class="col-state" scope="col" data-column="state" data-column-type="text" data-column-not-null="0" data-is-pk="0">
+                        
+                            
+                                <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals?_sort=state" rel="nofollow">state</a>
+                            
+                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-menu-icon">
+  <circle cx="12" cy="12" r="3"></circle>
+  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+</svg></th>
+                
+                    <th class="col-lon" scope="col" data-column="lon" data-column-type="real" data-column-not-null="0" data-is-pk="0">
+                        
+                            
+                                <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals?_sort=lon" rel="nofollow">lon</a>
+                            
+                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-menu-icon">
+  <circle cx="12" cy="12" r="3"></circle>
+  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+</svg></th>
+                
+                    <th class="col-lat" scope="col" data-column="lat" data-column-type="real" data-column-not-null="0" data-is-pk="0">
+                        
+                            
+                                <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals?_sort=lat" rel="nofollow">lat</a>
+                            
+                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-menu-icon">
+  <circle cx="12" cy="12" r="3"></circle>
+  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+</svg></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/1">1</a></td>
+                
+                    <td class="col-rowid type-int">1</td>
+                
+                    <td class="col-id type-int">1</td>
+                
+                    <td class="col-name type-str">Southern Hills Medical Center</td>
+                
+                    <td class="col-city type-str">BERRY HILL</td>
+                
+                    <td class="col-state type-str">TN</td>
+                
+                    <td class="col-lon type-float">-86.721939</td>
+                
+                    <td class="col-lat type-float">36.077843</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/2">2</a></td>
+                
+                    <td class="col-rowid type-int">2</td>
+                
+                    <td class="col-id type-int">2</td>
+                
+                    <td class="col-name type-str">Sycamore Shoals Hospital</td>
+                
+                    <td class="col-city type-str">ELIZABETHTON</td>
+                
+                    <td class="col-state type-str">TN</td>
+                
+                    <td class="col-lon type-float">-82.247635</td>
+                
+                    <td class="col-lat type-float">36.346218</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/3">3</a></td>
+                
+                    <td class="col-rowid type-int">3</td>
+                
+                    <td class="col-id type-int">3</td>
+                
+                    <td class="col-name type-str">Tokona Hospital</td>
+                
+                    <td class="col-city type-str">GREENEVILLE</td>
+                
+                    <td class="col-state type-str">TN</td>
+                
+                    <td class="col-lon type-float">-82.845711</td>
+                
+                    <td class="col-lat type-float">36.151772</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/4">4</a></td>
+                
+                    <td class="col-rowid type-int">4</td>
+                
+                    <td class="col-id type-int">4</td>
+                
+                    <td class="col-name type-str">University of Tennessee Child Development Center</td>
+                
+                    <td class="col-city type-str">DOWNTOWN MEMPHIS</td>
+                
+                    <td class="col-state type-str">TN</td>
+                
+                    <td class="col-lon type-float">-90.037033</td>
+                
+                    <td class="col-lat type-float">35.142872</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/5">5</a></td>
+                
+                    <td class="col-rowid type-int">5</td>
+                
+                    <td class="col-id type-int">5</td>
+                
+                    <td class="col-name type-str">Volunteer General Hospital</td>
+                
+                    <td class="col-city type-str">MARTIN</td>
+                
+                    <td class="col-state type-str">TN</td>
+                
+                    <td class="col-lon type-float">-88.868393</td>
+                
+                    <td class="col-lat type-float">36.335064</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/6">6</a></td>
+                
+                    <td class="col-rowid type-int">6</td>
+                
+                    <td class="col-id type-int">6</td>
+                
+                    <td class="col-name type-str">West Side Hospital</td>
+                
+                    <td class="col-city type-str">BELLE MEADE</td>
+                
+                    <td class="col-state type-str">TN</td>
+                
+                    <td class="col-lon type-float">-86.809723</td>
+                
+                    <td class="col-lat type-float">36.153667</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/7">7</a></td>
+                
+                    <td class="col-rowid type-int">7</td>
+                
+                    <td class="col-id type-int">7</td>
+                
+                    <td class="col-name type-str">William L Bork Memorial Hospital</td>
+                
+                    <td class="col-city type-str">COLLEGEDALE</td>
+                
+                    <td class="col-state type-str">TN</td>
+                
+                    <td class="col-lon type-float">-85.134125</td>
+                
+                    <td class="col-lat type-float">35.056461</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/8">8</a></td>
+                
+                    <td class="col-rowid type-int">8</td>
+                
+                    <td class="col-id type-int">8</td>
+                
+                    <td class="col-name type-str">All Saints Hospital</td>
+                
+                    <td class="col-city type-str">FORT WORTH</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-97.343361</td>
+                
+                    <td class="col-lat type-float">32.729851</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/9">9</a></td>
+                
+                    <td class="col-rowid type-int">9</td>
+                
+                    <td class="col-id type-int">9</td>
+                
+                    <td class="col-name type-str">Beaumont Army Hospital</td>
+                
+                    <td class="col-city type-str">CENTRAL EL PASO</td>
+                
+                    <td class="col-state type-str">NM</td>
+                
+                    <td class="col-lon type-float">-106.453598</td>
+                
+                    <td class="col-lat type-float">31.822046</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/10">10</a></td>
+                
+                    <td class="col-rowid type-int">10</td>
+                
+                    <td class="col-id type-int">10</td>
+                
+                    <td class="col-name type-str">Burns Hospital</td>
+                
+                    <td class="col-city type-str">CUERO</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-97.285271</td>
+                
+                    <td class="col-lat type-float">29.099424</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/11">11</a></td>
+                
+                    <td class="col-rowid type-int">11</td>
+                
+                    <td class="col-id type-int">11</td>
+                
+                    <td class="col-name type-str">Club of Christ Hospital</td>
+                
+                    <td class="col-city type-str">JEFFERSON</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-94.34742</td>
+                
+                    <td class="col-lat type-float">32.440712</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/12">12</a></td>
+                
+                    <td class="col-rowid type-int">12</td>
+                
+                    <td class="col-id type-int">12</td>
+                
+                    <td class="col-name type-str">Danforth Memorial Hospital</td>
+                
+                    <td class="col-city type-str">TEXAS CITY</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-94.901306</td>
+                
+                    <td class="col-lat type-float">29.392733</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/13">13</a></td>
+                
+                    <td class="col-rowid type-int">13</td>
+                
+                    <td class="col-id type-int">13</td>
+                
+                    <td class="col-name type-str">Eldridge Memorial Hospital</td>
+                
+                    <td class="col-city type-str">FIRST COLONY</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-95.617439</td>
+                
+                    <td class="col-lat type-float">29.628016</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/14">14</a></td>
+                
+                    <td class="col-rowid type-int">14</td>
+                
+                    <td class="col-id type-int">14</td>
+                
+                    <td class="col-name type-str">Good Shepherd Hospital</td>
+                
+                    <td class="col-city type-str">LONGVIEW</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-94.730774</td>
+                
+                    <td class="col-lat type-float">32.50098</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/15">15</a></td>
+                
+                    <td class="col-rowid type-int">15</td>
+                
+                    <td class="col-id type-int">15</td>
+                
+                    <td class="col-name type-str">Hamilton Hospital</td>
+                
+                    <td class="col-city type-str">OLNEY</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-98.763405</td>
+                
+                    <td class="col-lat type-float">33.369278</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/16">16</a></td>
+                
+                    <td class="col-rowid type-int">16</td>
+                
+                    <td class="col-id type-int">16</td>
+                
+                    <td class="col-name type-str">Holy Cross Hospital</td>
+                
+                    <td class="col-city type-str">AUSTIN</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-97.713066</td>
+                
+                    <td class="col-lat type-float">30.281878</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/17">17</a></td>
+                
+                    <td class="col-rowid type-int">17</td>
+                
+                    <td class="col-id type-int">17</td>
+                
+                    <td class="col-name type-str">Keightley Hospital</td>
+                
+                    <td class="col-city type-str">FRESNO</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-95.43911</td>
+                
+                    <td class="col-lat type-float">29.606903</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/18">18</a></td>
+                
+                    <td class="col-rowid type-int">18</td>
+                
+                    <td class="col-id type-int">18</td>
+                
+                    <td class="col-name type-str">Lockwood Hospital</td>
+                
+                    <td class="col-city type-str">HOUSTON</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-95.317993</td>
+                
+                    <td class="col-lat type-float">29.806057</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/19">19</a></td>
+                
+                    <td class="col-rowid type-int">19</td>
+                
+                    <td class="col-id type-int">19</td>
+                
+                    <td class="col-name type-str">Medical Hospital</td>
+                
+                    <td class="col-city type-str">TYLER</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-95.290787</td>
+                
+                    <td class="col-lat type-float">32.338207</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/20">20</a></td>
+                
+                    <td class="col-rowid type-int">20</td>
+                
+                    <td class="col-id type-int">20</td>
+                
+                    <td class="col-name type-str">Newton Memorial Hospital</td>
+                
+                    <td class="col-city type-str">CAMERON</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-96.980827</td>
+                
+                    <td class="col-lat type-float">30.854908</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/21">21</a></td>
+                
+                    <td class="col-rowid type-int">21</td>
+                
+                    <td class="col-id type-int">21</td>
+                
+                    <td class="col-name type-str">Oak Hills Haven</td>
+                
+                    <td class="col-city type-str">BALCONES HEIGHTS</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-98.574471</td>
+                
+                    <td class="col-lat type-float">29.501621</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/22">22</a></td>
+                
+                    <td class="col-rowid type-int">22</td>
+                
+                    <td class="col-id type-int">22</td>
+                
+                    <td class="col-name type-str">Parkview General Hospital</td>
+                
+                    <td class="col-city type-str">BAYSIDE</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-97.393044</td>
+                
+                    <td class="col-lat type-float">27.728918</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/23">23</a></td>
+                
+                    <td class="col-rowid type-int">23</td>
+                
+                    <td class="col-id type-int">23</td>
+                
+                    <td class="col-name type-str">Porter Hospital</td>
+                
+                    <td class="col-city type-str">DOWNTOWN LUBBOCK</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-101.867386</td>
+                
+                    <td class="col-lat type-float">33.577305</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/24">24</a></td>
+                
+                    <td class="col-rowid type-int">24</td>
+                
+                    <td class="col-id type-int">24</td>
+                
+                    <td class="col-name type-str">Robstown Riverside Hospital</td>
+                
+                    <td class="col-city type-str">NORTH SAN PEDRO</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-97.635277</td>
+                
+                    <td class="col-lat type-float">27.855021</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/25">25</a></td>
+                
+                    <td class="col-rowid type-int">25</td>
+                
+                    <td class="col-id type-int">25</td>
+                
+                    <td class="col-name type-str">Saint Edwards Hospital</td>
+                
+                    <td class="col-city type-str">CAMERON</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-96.977203</td>
+                
+                    <td class="col-lat type-float">30.858799</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/26">26</a></td>
+                
+                    <td class="col-rowid type-int">26</td>
+                
+                    <td class="col-id type-int">26</td>
+                
+                    <td class="col-name type-str">Saint Jude Hospital</td>
+                
+                    <td class="col-city type-str">BRENHAM</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-96.399414</td>
+                
+                    <td class="col-lat type-float">30.179655</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/27">27</a></td>
+                
+                    <td class="col-rowid type-int">27</td>
+                
+                    <td class="col-id type-int">27</td>
+                
+                    <td class="col-name type-str">Santa Rosa Infirmary</td>
+                
+                    <td class="col-city type-str">ALAMO HEIGHTS</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-98.498627</td>
+                
+                    <td class="col-lat type-float">29.426903</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/28">28</a></td>
+                
+                    <td class="col-rowid type-int">28</td>
+                
+                    <td class="col-id type-int">28</td>
+                
+                    <td class="col-name type-str">Southton Sanitorium</td>
+                
+                    <td class="col-city type-str">BULVERDE</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-98.421677</td>
+                
+                    <td class="col-lat type-float">29.312176</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/29">29</a></td>
+                
+                    <td class="col-rowid type-int">29</td>
+                
+                    <td class="col-id type-int">29</td>
+                
+                    <td class="col-name type-str">State Tuberculosis Hospital</td>
+                
+                    <td class="col-city type-str">HARLINGEN</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-97.706375</td>
+                
+                    <td class="col-lat type-float">26.159523</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/30">30</a></td>
+                
+                    <td class="col-rowid type-int">30</td>
+                
+                    <td class="col-id type-int">30</td>
+                
+                    <td class="col-name type-str">Texas Elks Hospital</td>
+                
+                    <td class="col-city type-str">PALMETO</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-97.582497</td>
+                
+                    <td class="col-lat type-float">29.595232</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/31">31</a></td>
+                
+                    <td class="col-rowid type-int">31</td>
+                
+                    <td class="col-id type-int">31</td>
+                
+                    <td class="col-name type-str">Valley Baptist Hospital</td>
+                
+                    <td class="col-city type-str">HARLINGEN</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-97.67083</td>
+                
+                    <td class="col-lat type-float">26.175074</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/32">32</a></td>
+                
+                    <td class="col-rowid type-int">32</td>
+                
+                    <td class="col-id type-int">32</td>
+                
+                    <td class="col-name type-str">Wilson Hospital</td>
+                
+                    <td class="col-city type-str">BAYSIDE</td>
+                
+                    <td class="col-state type-str">TX</td>
+                
+                    <td class="col-lon type-float">-97.386658</td>
+                
+                    <td class="col-lat type-float">27.749197</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/33">33</a></td>
+                
+                    <td class="col-rowid type-int">33</td>
+                
+                    <td class="col-id type-int">33</td>
+                
+                    <td class="col-name type-str">Ashley Valley Medical Center</td>
+                
+                    <td class="col-city type-str">MAESER</td>
+                
+                    <td class="col-state type-str">UT</td>
+                
+                    <td class="col-lon type-float">-109.530975</td>
+                
+                    <td class="col-lat type-float">40.458023</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/34">34</a></td>
+                
+                    <td class="col-rowid type-int">34</td>
+                
+                    <td class="col-id type-int">34</td>
+                
+                    <td class="col-name type-str">Charter Canyon Hospital</td>
+                
+                    <td class="col-city type-str">LINDON</td>
+                
+                    <td class="col-state type-str">UT</td>
+                
+                    <td class="col-lon type-float">-111.664085</td>
+                
+                    <td class="col-lat type-float">40.310513</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/35">35</a></td>
+                
+                    <td class="col-rowid type-int">35</td>
+                
+                    <td class="col-id type-int">35</td>
+                
+                    <td class="col-name type-str">Duchesne County Hospital</td>
+                
+                    <td class="col-city type-str">BALLARD</td>
+                
+                    <td class="col-state type-str">UT</td>
+                
+                    <td class="col-lon type-float">-109.996262</td>
+                
+                    <td class="col-lat type-float">40.304127</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/36">36</a></td>
+                
+                    <td class="col-rowid type-int">36</td>
+                
+                    <td class="col-id type-int">36</td>
+                
+                    <td class="col-name type-str">Holy Cross Hospital</td>
+                
+                    <td class="col-city type-str">SALT LAKE CITY</td>
+                
+                    <td class="col-state type-str">UT</td>
+                
+                    <td class="col-lon type-float">-111.861053</td>
+                
+                    <td class="col-lat type-float">40.768005</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/37">37</a></td>
+                
+                    <td class="col-rowid type-int">37</td>
+                
+                    <td class="col-id type-int">37</td>
+                
+                    <td class="col-name type-str">Logan Regional Hospital</td>
+                
+                    <td class="col-city type-str">HYDE PARK</td>
+                
+                    <td class="col-state type-str">UT</td>
+                
+                    <td class="col-lon type-float">-111.822166</td>
+                
+                    <td class="col-lat type-float">41.756042</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/38">38</a></td>
+                
+                    <td class="col-rowid type-int">38</td>
+                
+                    <td class="col-id type-int">38</td>
+                
+                    <td class="col-name type-str">Orem Community Hospital</td>
+                
+                    <td class="col-city type-str">LINDON</td>
+                
+                    <td class="col-state type-str">UT</td>
+                
+                    <td class="col-lon type-float">-111.705482</td>
+                
+                    <td class="col-lat type-float">40.305515</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/39">39</a></td>
+                
+                    <td class="col-rowid type-int">39</td>
+                
+                    <td class="col-id type-int">39</td>
+                
+                    <td class="col-name type-str">Saint Benedicts Hospital</td>
+                
+                    <td class="col-city type-str">CLEARFIELD</td>
+                
+                    <td class="col-state type-str">UT</td>
+                
+                    <td class="col-lon type-float">-111.970215</td>
+                
+                    <td class="col-lat type-float">41.163273</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/40">40</a></td>
+                
+                    <td class="col-rowid type-int">40</td>
+                
+                    <td class="col-id type-int">40</td>
+                
+                    <td class="col-name type-str">Shriners Hospital</td>
+                
+                    <td class="col-city type-str">SALT LAKE CITY</td>
+                
+                    <td class="col-state type-str">UT</td>
+                
+                    <td class="col-lon type-float">-111.851334</td>
+                
+                    <td class="col-lat type-float">40.777725</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/41">41</a></td>
+                
+                    <td class="col-rowid type-int">41</td>
+                
+                    <td class="col-id type-int">41</td>
+                
+                    <td class="col-name type-str">Utah Valley Regional Medical Center</td>
+                
+                    <td class="col-city type-str">OREM</td>
+                
+                    <td class="col-state type-str">UT</td>
+                
+                    <td class="col-lon type-float">-111.665474</td>
+                
+                    <td class="col-lat type-float">40.247173</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/42">42</a></td>
+                
+                    <td class="col-rowid type-int">42</td>
+                
+                    <td class="col-id type-int">42</td>
+                
+                    <td class="col-name type-str">Alexandria Hospital</td>
+                
+                    <td class="col-city type-str">ALEXANDRIA</td>
+                
+                    <td class="col-state type-str">MD</td>
+                
+                    <td class="col-lon type-float">-77.106094</td>
+                
+                    <td class="col-lat type-float">38.822334</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/43">43</a></td>
+                
+                    <td class="col-rowid type-int">43</td>
+                
+                    <td class="col-id type-int">43</td>
+                
+                    <td class="col-name type-str">Bayberry Hospital</td>
+                
+                    <td class="col-city type-str">BUCKROE BEACH</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-76.338554</td>
+                
+                    <td class="col-lat type-float">37.022926</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/44">44</a></td>
+                
+                    <td class="col-rowid type-int">44</td>
+                
+                    <td class="col-id type-int">44</td>
+                
+                    <td class="col-name type-str">Brookwood Nursing Home</td>
+                
+                    <td class="col-city type-str">ARKENDALE</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.382759</td>
+                
+                    <td class="col-lat type-float">38.394016</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/45">45</a></td>
+                
+                    <td class="col-rowid type-int">45</td>
+                
+                    <td class="col-id type-int">45</td>
+                
+                    <td class="col-name type-str">Central Virginia Training Center and Hospital</td>
+                
+                    <td class="col-city type-str">BOCOCK</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-79.141968</td>
+                
+                    <td class="col-lat type-float">37.40292</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/46">46</a></td>
+                
+                    <td class="col-rowid type-int">46</td>
+                
+                    <td class="col-id type-int">46</td>
+                
+                    <td class="col-name type-str">Chippenham Hospital</td>
+                
+                    <td class="col-city type-str">BON AIR</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.526649</td>
+                
+                    <td class="col-lat type-float">37.51376</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/47">47</a></td>
+                
+                    <td class="col-rowid type-int">47</td>
+                
+                    <td class="col-id type-int">47</td>
+                
+                    <td class="col-name type-str">Community Hospital</td>
+                
+                    <td class="col-city type-str">DOWNTOWN RICHMOND</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.450531</td>
+                
+                    <td class="col-lat type-float">37.565144</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/48">48</a></td>
+                
+                    <td class="col-rowid type-int">48</td>
+                
+                    <td class="col-id type-int">48</td>
+                
+                    <td class="col-name type-str">David C Wilson Neuro-Psychiatric Hospital</td>
+                
+                    <td class="col-city type-str">CHARLOTTESVILLE</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-78.506126</td>
+                
+                    <td class="col-lat type-float">38.049858</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/49">49</a></td>
+                
+                    <td class="col-rowid type-int">49</td>
+                
+                    <td class="col-id type-int">49</td>
+                
+                    <td class="col-name type-str">Fairfax Hospital</td>
+                
+                    <td class="col-city type-str">FAIRFAX</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.227486</td>
+                
+                    <td class="col-lat type-float">38.857891</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/50">50</a></td>
+                
+                    <td class="col-rowid type-int">50</td>
+                
+                    <td class="col-id type-int">50</td>
+                
+                    <td class="col-name type-str">Fredericksburg Nursing Home</td>
+                
+                    <td class="col-city type-str">FREDERICKSBURG</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.525543</td>
+                
+                    <td class="col-lat type-float">38.290691</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/51">51</a></td>
+                
+                    <td class="col-rowid type-int">51</td>
+                
+                    <td class="col-id type-int">51</td>
+                
+                    <td class="col-name type-str">General Hospital Number 9 (historical)</td>
+                
+                    <td class="col-city type-str">DOWNTOWN RICHMOND</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.426369</td>
+                
+                    <td class="col-lat type-float">37.535423</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/52">52</a></td>
+                
+                    <td class="col-rowid type-int">52</td>
+                
+                    <td class="col-id type-int">52</td>
+                
+                    <td class="col-name type-str">Greensville County Health Center</td>
+                
+                    <td class="col-city type-str">EMPORIA</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.541092</td>
+                
+                    <td class="col-lat type-float">36.686817</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/53">53</a></td>
+                
+                    <td class="col-rowid type-int">53</td>
+                
+                    <td class="col-id type-int">53</td>
+                
+                    <td class="col-name type-str">Hiram W Davis Medical Center</td>
+                
+                    <td class="col-city type-str">ADDISON</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.454147</td>
+                
+                    <td class="col-lat type-float">37.204868</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/54">54</a></td>
+                
+                    <td class="col-rowid type-int">54</td>
+                
+                    <td class="col-id type-int">54</td>
+                
+                    <td class="col-name type-str">Jefferson Hospital</td>
+                
+                    <td class="col-city type-str">ROANOKE</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-79.946983</td>
+                
+                    <td class="col-lat type-float">37.261806</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/55">55</a></td>
+                
+                    <td class="col-rowid type-int">55</td>
+                
+                    <td class="col-id type-int">55</td>
+                
+                    <td class="col-name type-str">Keezel Infirmary</td>
+                
+                    <td class="col-city type-str">DALE ENTERPRISE</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-78.871422</td>
+                
+                    <td class="col-lat type-float">38.439297</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/56">56</a></td>
+                
+                    <td class="col-rowid type-int">56</td>
+                
+                    <td class="col-id type-int">56</td>
+                
+                    <td class="col-name type-str">Letcher Memorial Hospital (historical)</td>
+                
+                    <td class="col-city type-str">EDGERTON</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.84333</td>
+                
+                    <td class="col-lat type-float">36.762089</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/57">57</a></td>
+                
+                    <td class="col-rowid type-int">57</td>
+                
+                    <td class="col-id type-int">57</td>
+                
+                    <td class="col-name type-str">Lynchburg General Hospital</td>
+                
+                    <td class="col-city type-str">BOCOCK</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-79.171692</td>
+                
+                    <td class="col-lat type-float">37.41708</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/58">58</a></td>
+                
+                    <td class="col-rowid type-int">58</td>
+                
+                    <td class="col-id type-int">58</td>
+                
+                    <td class="col-name type-str">Martha Jefferson Hospital</td>
+                
+                    <td class="col-city type-str">CHARLOTTESVILLE</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-78.471672</td>
+                
+                    <td class="col-lat type-float">38.032078</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/59">59</a></td>
+                
+                    <td class="col-rowid type-int">59</td>
+                
+                    <td class="col-id type-int">59</td>
+                
+                    <td class="col-name type-str">McGuire Veterans Hospital</td>
+                
+                    <td class="col-city type-str">BENSLEY</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.466377</td>
+                
+                    <td class="col-lat type-float">37.49543</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/60">60</a></td>
+                
+                    <td class="col-rowid type-int">60</td>
+                
+                    <td class="col-id type-int">60</td>
+                
+                    <td class="col-name type-str">Memorial Hospital of Martinsville and Henry County</td>
+                
+                    <td class="col-city type-str">MARTINSVILLE CITY</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-79.867546</td>
+                
+                    <td class="col-lat type-float">36.699306</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/61">61</a></td>
+                
+                    <td class="col-rowid type-int">61</td>
+                
+                    <td class="col-id type-int">61</td>
+                
+                    <td class="col-name type-str">Nelson Clinic</td>
+                
+                    <td class="col-city type-str">DOWNTOWN RICHMOND</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.430809</td>
+                
+                    <td class="col-lat type-float">37.540974</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/62">62</a></td>
+                
+                    <td class="col-rowid type-int">62</td>
+                
+                    <td class="col-id type-int">62</td>
+                
+                    <td class="col-name type-str">Northampton-Accomack Memorial Hospital</td>
+                
+                    <td class="col-city type-str">BIRDSNEST</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-75.861046</td>
+                
+                    <td class="col-lat type-float">37.476803</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/63">63</a></td>
+                
+                    <td class="col-rowid type-int">63</td>
+                
+                    <td class="col-id type-int">63</td>
+                
+                    <td class="col-name type-str">Piedmont State Hospital</td>
+                
+                    <td class="col-city type-str">BURKEVILLE</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-78.175278</td>
+                
+                    <td class="col-lat type-float">37.192371</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/64">64</a></td>
+                
+                    <td class="col-rowid type-int">64</td>
+                
+                    <td class="col-id type-int">64</td>
+                
+                    <td class="col-name type-str">Prince William Hospital</td>
+                
+                    <td class="col-city type-str">BULL RUN</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.486649</td>
+                
+                    <td class="col-lat type-float">38.767334</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/65">65</a></td>
+                
+                    <td class="col-rowid type-int">65</td>
+                
+                    <td class="col-id type-int">65</td>
+                
+                    <td class="col-name type-str">Randolph Hospital</td>
+                
+                    <td class="col-city type-str">BIRCHETT ESTATE</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.291092</td>
+                
+                    <td class="col-lat type-float">37.30793</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/66">66</a></td>
+                
+                    <td class="col-rowid type-int">66</td>
+                
+                    <td class="col-id type-int">66</td>
+                
+                    <td class="col-name type-str">Richmond Eye and Ear Hospital</td>
+                
+                    <td class="col-city type-str">DOWNTOWN RICHMOND</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.431923</td>
+                
+                    <td class="col-lat type-float">37.540974</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/67">67</a></td>
+                
+                    <td class="col-rowid type-int">67</td>
+                
+                    <td class="col-id type-int">67</td>
+                
+                    <td class="col-name type-str">Roanoke Memorial Hospital Rehabilitation Center</td>
+                
+                    <td class="col-city type-str">ROANOKE</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-79.945038</td>
+                
+                    <td class="col-lat type-float">37.249577</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/68">68</a></td>
+                
+                    <td class="col-rowid type-int">68</td>
+                
+                    <td class="col-id type-int">68</td>
+                
+                    <td class="col-name type-str">Russell County Medical Center</td>
+                
+                    <td class="col-city type-str">LEBANON</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-82.078743</td>
+                
+                    <td class="col-lat type-float">36.89872</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/69">69</a></td>
+                
+                    <td class="col-rowid type-int">69</td>
+                
+                    <td class="col-id type-int">69</td>
+                
+                    <td class="col-name type-str">Salvation Army Hospital</td>
+                
+                    <td class="col-city type-str">DOWNTOWN RICHMOND</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.417206</td>
+                
+                    <td class="col-lat type-float">37.564865</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/70">70</a></td>
+                
+                    <td class="col-rowid type-int">70</td>
+                
+                    <td class="col-id type-int">70</td>
+                
+                    <td class="col-name type-str">Sheltering Arms Physical Rehabilitation Hospital</td>
+                
+                    <td class="col-city type-str">DOWNTOWN RICHMOND</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.456093</td>
+                
+                    <td class="col-lat type-float">37.579586</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/71">71</a></td>
+                
+                    <td class="col-rowid type-int">71</td>
+                
+                    <td class="col-id type-int">71</td>
+                
+                    <td class="col-name type-str">Southampton Memorial Hospital</td>
+                
+                    <td class="col-city type-str">FRANKLIN</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-76.937737</td>
+                
+                    <td class="col-lat type-float">36.691818</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/72">72</a></td>
+                
+                    <td class="col-rowid type-int">72</td>
+                
+                    <td class="col-id type-int">72</td>
+                
+                    <td class="col-name type-str">Southwestern State Hospital</td>
+                
+                    <td class="col-city type-str">MARION</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-81.51123</td>
+                
+                    <td class="col-lat type-float">36.832893</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/73">73</a></td>
+                
+                    <td class="col-rowid type-int">73</td>
+                
+                    <td class="col-id type-int">73</td>
+                
+                    <td class="col-name type-str">The Retreat Hospital</td>
+                
+                    <td class="col-city type-str">DOWNTOWN RICHMOND</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.473038</td>
+                
+                    <td class="col-lat type-float">37.554314</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/74">74</a></td>
+                
+                    <td class="col-rowid type-int">74</td>
+                
+                    <td class="col-id type-int">74</td>
+                
+                    <td class="col-name type-str">United States Public Health Service Hospital</td>
+                
+                    <td class="col-city type-str">DOWNTOWN NORFOLK</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-76.302727</td>
+                
+                    <td class="col-lat type-float">36.901539</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/75">75</a></td>
+                
+                    <td class="col-rowid type-int">75</td>
+                
+                    <td class="col-id type-int">75</td>
+                
+                    <td class="col-name type-str">Vinton Family Medical Center</td>
+                
+                    <td class="col-city type-str">ROANOKE</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-79.869476</td>
+                
+                    <td class="col-lat type-float">37.279026</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/76">76</a></td>
+                
+                    <td class="col-rowid type-int">76</td>
+                
+                    <td class="col-id type-int">76</td>
+                
+                    <td class="col-name type-str">Walter Reed Convalescent Center</td>
+                
+                    <td class="col-city type-str">ARK</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-76.543282</td>
+                
+                    <td class="col-lat type-float">37.42181</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/77">77</a></td>
+                
+                    <td class="col-rowid type-int">77</td>
+                
+                    <td class="col-id type-int">77</td>
+                
+                    <td class="col-name type-str">Westminster Hospital</td>
+                
+                    <td class="col-city type-str">DOWNTOWN RICHMOND</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-77.458595</td>
+                
+                    <td class="col-lat type-float">37.597923</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/78">78</a></td>
+                
+                    <td class="col-rowid type-int">78</td>
+                
+                    <td class="col-id type-int">78</td>
+                
+                    <td class="col-name type-str">Winslow Hospital</td>
+                
+                    <td class="col-city type-str">GATEWOOD</td>
+                
+                    <td class="col-state type-str">NC</td>
+                
+                    <td class="col-lon type-float">-79.399467</td>
+                
+                    <td class="col-lat type-float">36.569027</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/79">79</a></td>
+                
+                    <td class="col-rowid type-int">79</td>
+                
+                    <td class="col-id type-int">79</td>
+                
+                    <td class="col-name type-str">Woodrow Wilson Rehabilitation Center</td>
+                
+                    <td class="col-city type-str">STAUNTON</td>
+                
+                    <td class="col-state type-str">VA</td>
+                
+                    <td class="col-lon type-float">-78.991692</td>
+                
+                    <td class="col-lat type-float">38.117912</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/80">80</a></td>
+                
+                    <td class="col-rowid type-int">80</td>
+                
+                    <td class="col-id type-int">80</td>
+                
+                    <td class="col-name type-str">Kerbs Hospital</td>
+                
+                    <td class="col-city type-str">NORTH FAIRFAX</td>
+                
+                    <td class="col-state type-str">VT</td>
+                
+                    <td class="col-lon type-float">-73.0718</td>
+                
+                    <td class="col-lat type-float">44.807545</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/81">81</a></td>
+                
+                    <td class="col-rowid type-int">81</td>
+                
+                    <td class="col-id type-int">81</td>
+                
+                    <td class="col-name type-str">Caldwell Health Center</td>
+                
+                    <td class="col-city type-str">DES MOINES</td>
+                
+                    <td class="col-state type-str">WA</td>
+                
+                    <td class="col-lon type-float">-122.32235</td>
+                
+                    <td class="col-lat type-float">47.390102</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/82">82</a></td>
+                
+                    <td class="col-rowid type-int">82</td>
+                
+                    <td class="col-id type-int">82</td>
+                
+                    <td class="col-name type-str">Dayton General Hospital</td>
+                
+                    <td class="col-city type-str">DAYTON</td>
+                
+                    <td class="col-state type-str">WA</td>
+                
+                    <td class="col-lon type-float">-117.969933</td>
+                
+                    <td class="col-lat type-float">46.312084</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/83">83</a></td>
+                
+                    <td class="col-rowid type-int">83</td>
+                
+                    <td class="col-id type-int">83</td>
+                
+                    <td class="col-name type-str">General Hospital of Everett</td>
+                
+                    <td class="col-city type-str">EVERETT</td>
+                
+                    <td class="col-state type-str">WA</td>
+                
+                    <td class="col-lon type-float">-122.207352</td>
+                
+                    <td class="col-lat type-float">47.999538</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/84">84</a></td>
+                
+                    <td class="col-rowid type-int">84</td>
+                
+                    <td class="col-id type-int">84</td>
+                
+                    <td class="col-name type-str">Klickitat Valley Hospital</td>
+                
+                    <td class="col-city type-str">GOLDENDALE</td>
+                
+                    <td class="col-state type-str">WA</td>
+                
+                    <td class="col-lon type-float">-120.810898</td>
+                
+                    <td class="col-lat type-float">45.820126</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/85">85</a></td>
+                
+                    <td class="col-rowid type-int">85</td>
+                
+                    <td class="col-id type-int">85</td>
+                
+                    <td class="col-name type-str">Mason General Hospital</td>
+                
+                    <td class="col-city type-str">SHELTON</td>
+                
+                    <td class="col-state type-str">WA</td>
+                
+                    <td class="col-lon type-float">-123.114326</td>
+                
+                    <td class="col-lat type-float">47.225647</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/86">86</a></td>
+                
+                    <td class="col-rowid type-int">86</td>
+                
+                    <td class="col-id type-int">86</td>
+                
+                    <td class="col-name type-str">Overlake Memorial Hospital</td>
+                
+                    <td class="col-city type-str">BELLEVUE</td>
+                
+                    <td class="col-state type-str">WA</td>
+                
+                    <td class="col-lon type-float">-122.187347</td>
+                
+                    <td class="col-lat type-float">47.620102</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/87">87</a></td>
+                
+                    <td class="col-rowid type-int">87</td>
+                
+                    <td class="col-id type-int">87</td>
+                
+                    <td class="col-name type-str">Riverton General Hospital</td>
+                
+                    <td class="col-city type-str">BURIEN</td>
+                
+                    <td class="col-state type-str">WA</td>
+                
+                    <td class="col-lon type-float">-122.296234</td>
+                
+                    <td class="col-lat type-float">47.48732</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/88">88</a></td>
+                
+                    <td class="col-rowid type-int">88</td>
+                
+                    <td class="col-id type-int">88</td>
+                
+                    <td class="col-name type-str">Saint Josephs Hospital</td>
+                
+                    <td class="col-city type-str">CHEWELAH</td>
+                
+                    <td class="col-state type-str">WA</td>
+                
+                    <td class="col-lon type-float">-117.710793</td>
+                
+                    <td class="col-lat type-float">48.277958</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/89">89</a></td>
+                
+                    <td class="col-rowid type-int">89</td>
+                
+                    <td class="col-id type-int">89</td>
+                
+                    <td class="col-name type-str">Stevens Memorial Hospital</td>
+                
+                    <td class="col-city type-str">LAKE FOREST PARK</td>
+                
+                    <td class="col-state type-str">WA</td>
+                
+                    <td class="col-lon type-float">-122.334572</td>
+                
+                    <td class="col-lat type-float">47.80315</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/90">90</a></td>
+                
+                    <td class="col-rowid type-int">90</td>
+                
+                    <td class="col-id type-int">90</td>
+                
+                    <td class="col-name type-str">Western Washington State Hospital</td>
+                
+                    <td class="col-city type-str">FIRCREST</td>
+                
+                    <td class="col-state type-str">WA</td>
+                
+                    <td class="col-lon type-float">-122.566238</td>
+                
+                    <td class="col-lat type-float">47.180099</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/91">91</a></td>
+                
+                    <td class="col-rowid type-int">91</td>
+                
+                    <td class="col-id type-int">91</td>
+                
+                    <td class="col-name type-str">Bellin Memorial Hospital</td>
+                
+                    <td class="col-city type-str">ALLOUEZ</td>
+                
+                    <td class="col-state type-str">WI</td>
+                
+                    <td class="col-lon type-float">-88.011215</td>
+                
+                    <td class="col-lat type-float">44.502213</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/92">92</a></td>
+                
+                    <td class="col-rowid type-int">92</td>
+                
+                    <td class="col-id type-int">92</td>
+                
+                    <td class="col-name type-str">Bloomer Community Hospital</td>
+                
+                    <td class="col-city type-str">BLOOMER</td>
+                
+                    <td class="col-state type-str">WI</td>
+                
+                    <td class="col-lon type-float">-91.501831</td>
+                
+                    <td class="col-lat type-float">45.101902</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/93">93</a></td>
+                
+                    <td class="col-rowid type-int">93</td>
+                
+                    <td class="col-id type-int">93</td>
+                
+                    <td class="col-name type-str">Central State Hospital</td>
+                
+                    <td class="col-city type-str">WAUPUN</td>
+                
+                    <td class="col-state type-str">WI</td>
+                
+                    <td class="col-lon type-float">-88.737045</td>
+                
+                    <td class="col-lat type-float">43.624157</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/94">94</a></td>
+                
+                    <td class="col-rowid type-int">94</td>
+                
+                    <td class="col-id type-int">94</td>
+                
+                    <td class="col-name type-str">Divine Savior Hospital</td>
+                
+                    <td class="col-city type-str">PORTAGE</td>
+                
+                    <td class="col-state type-str">WI</td>
+                
+                    <td class="col-lon type-float">-89.47818</td>
+                
+                    <td class="col-lat type-float">43.540543</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/95">95</a></td>
+                
+                    <td class="col-rowid type-int">95</td>
+                
+                    <td class="col-id type-int">95</td>
+                
+                    <td class="col-name type-str">Dunn County Health Care Center</td>
+                
+                    <td class="col-city type-str">MENOMONIE</td>
+                
+                    <td class="col-state type-str">WI</td>
+                
+                    <td class="col-lon type-float">-91.887398</td>
+                
+                    <td class="col-lat type-float">44.88718</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/96">96</a></td>
+                
+                    <td class="col-rowid type-int">96</td>
+                
+                    <td class="col-id type-int">96</td>
+                
+                    <td class="col-name type-str">Fond du Lac County Hospital</td>
+                
+                    <td class="col-city type-str">NORTH FOND DU LAC</td>
+                
+                    <td class="col-state type-str">WI</td>
+                
+                    <td class="col-lon type-float">-88.476219</td>
+                
+                    <td class="col-lat type-float">43.756378</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/97">97</a></td>
+                
+                    <td class="col-rowid type-int">97</td>
+                
+                    <td class="col-id type-int">97</td>
+                
+                    <td class="col-name type-str">Grantsburg Clinic</td>
+                
+                    <td class="col-city type-str">BRANSTAD</td>
+                
+                    <td class="col-state type-str">MN</td>
+                
+                    <td class="col-lon type-float">-92.687988</td>
+                
+                    <td class="col-lat type-float">45.774956</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/98">98</a></td>
+                
+                    <td class="col-rowid type-int">98</td>
+                
+                    <td class="col-id type-int">98</td>
+                
+                    <td class="col-name type-str">Hickory Grove Sanatorium</td>
+                
+                    <td class="col-city type-str">WRIGHTSTOWN</td>
+                
+                    <td class="col-state type-str">WI</td>
+                
+                    <td class="col-lon type-float">-88.12149</td>
+                
+                    <td class="col-lat type-float">44.391384</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/99">99</a></td>
+                
+                    <td class="col-rowid type-int">99</td>
+                
+                    <td class="col-id type-int">99</td>
+                
+                    <td class="col-name type-str">Janesville Medical Center</td>
+                
+                    <td class="col-city type-str">JANESVILLE</td>
+                
+                    <td class="col-state type-str">WI</td>
+                
+                    <td class="col-lon type-float">-88.974548</td>
+                
+                    <td class="col-lat type-float">42.698902</td>
+                
+            </tr>
+        
+            <tr>
+                
+                    <td class="col-Link type-pk"><a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals/100">100</a></td>
+                
+                    <td class="col-rowid type-int">100</td>
+                
+                    <td class="col-id type-int">100</td>
+                
+                    <td class="col-name type-str">Lakeland Hospital</td>
+                
+                    <td class="col-city type-str">COMO</td>
+                
+                    <td class="col-state type-str">WI</td>
+                
+                    <td class="col-lon type-float">-88.493431</td>
+                
+                    <td class="col-lat type-float">42.663074</td>
+                
+            </tr>
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+     <p><a href="http://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals?_next=100">Next page</a></p>
+
+
+
+    <div id="export" class="advanced-export">
+        <h3>Advanced export</h3>
+        <p>JSON shape:
+            <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals.json">default</a>,
+            <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals.json?_shape=array">array</a>,
+            <a href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals.json?_shape=array&amp;_nl=on">newline-delimited</a>
+        </p>
+        <form action="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/user/zinderab/hospitals/hospitals.csv" method="get">
+            <p>
+                CSV options:
+                <label><input type="checkbox" name="_dl"> download file</label>
+                
+                <label><input type="checkbox" name="_stream"> stream all rows</label>
+                <input type="submit" value="Export CSV">
+                
+                    <input type="hidden" name="_size" value="max">
+                
+            </p>
+        </form>
+    </div>
+
+
+
+    <pre class="wrapped-sql">CREATE TABLE [hospitals] (
+	[id] integer,
+	[name] text,
+	[city] text,
+	[state] text,
+	[lon] real,
+	[lat] real
+);</pre>
+
+
+
+
+
+</section>
+</div>
+<footer class="ft">Powered by <a href="https://datasette.io/" title="Datasette v0.64.6">Datasette</a>
+· Queries took 41.523ms
+
+    
+    
+    
+</footer>
+
+<script>
+document.body.addEventListener('click', (ev) => {
+    /* Close any open details elements that this click is outside of */
+    var target = ev.target;
+    var detailsClickedWithin = null;
+    while (target && target.tagName != 'DETAILS') {
+        target = target.parentNode;
+    }
+    if (target && target.tagName == 'DETAILS') {
+        detailsClickedWithin = target;
+    }
+    Array.from(document.getElementsByTagName('details')).filter(
+        (details) => details.open && details != detailsClickedWithin
+    ).forEach(details => details.open = false);
+});
+</script>
+
+
+    <script>window.DATASETTE_CLUSTER_MAP_TILE_LAYER = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+window.DATASETTE_CLUSTER_MAP_TILE_LAYER_OPTIONS = {"maxZoom": 19, "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"};
+window.DATASETTE_CLUSTER_MAP_LATITUDE_COLUMN = "lat";
+window.DATASETTE_CLUSTER_MAP_LONGITUDE_COLUMN = "lon";
+window.datasette = window.datasette || {};
+datasette.cluster_map = {
+    MARKERCLUSTER_URL: '/user/zinderab/-/static-plugins/datasette-cluster-map/leaflet.markercluster.min.js',
+    MARKERCLUSTER_CSS_URL: '/user/zinderab/-/static-plugins/datasette-cluster-map/leaflet.markercluster.css'
+};</script>
+
+    <script>
+window.datasette = window.datasette || {};
+datasette.leaflet = {
+    JAVASCRIPT_URL: '/user/zinderab/-/static-plugins/datasette-leaflet/leaflet-v1.7.1.js',
+    CSS_URL: '/user/zinderab/-/static-plugins/datasette-leaflet/leaflet-v1.7.1.css'
+};
+</script>
+
+
+<!-- Templates considered: table-hospitals-hospitals.html, *table.html -->
+
+<div class="dropdown-menu" style="position: absolute; display: none;">
+<div class="hook"></div>
+<ul>
+  <li><a class="dropdown-sort-asc" href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals#">Sort ascending</a></li>
+  <li><a class="dropdown-sort-desc" href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals#">Sort descending</a></li>
+  <li><a class="dropdown-facet" href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals#">Facet by this</a></li>
+  <li><a class="dropdown-hide-column" href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals#">Hide this column</a></li>
+  <li><a class="dropdown-show-all-columns" href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals#">Show all columns</a></li>
+  <li><a class="dropdown-not-blank" href="https://datasette-2-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/zinderab/hospitals/hospitals#">Show not-blank rows</a></li>
+</ul>
+<p class="dropdown-column-type"></p>
+<p class="dropdown-column-description"></p>
+</div></body></html>
