@@ -45,11 +45,15 @@ BEGIN;
 CREATE TABLE IF NOT EXISTS public."softcartDimDate"
 (
     dateid integer NOT NULL,
-    month_num integer NOT NULL,
-    month_name character varying(12) NOT NULL,
-    quarter integer NOT NULL,
-    week_num integer NOT NULL,
-    year integer NOT NULL,
+    date date NOT NULL,
+    Year integer NOT NULL,
+    Quarter integer NOT NULL,
+    QuarterName character(50) NOT NULL,
+    Month integer NOT NULL,
+    Monthname character(50) NOT NULL,
+    Day integer NOT NULL,
+    Weekday integer NOT NULL,
+    WeekdayName character(50) NOT NULL,
     PRIMARY KEY (dateid)
 );
 
@@ -121,3 +125,50 @@ END;
 
 """once this was generated it was ran into a databse called staging to create the 
 Schema, using Phpadmin for postgresSQL"""
+
+'''Following this we uploaded data into the database to be queried'''
+"""The first query is a GROUPING SETS query"""
+SELECT co.country, ca.category, SUM(f.amount) AS totalsales 
+FROM public."FactSales" f
+JOIN public."DimCountry" co
+ON f.countryid = co.countryid
+JOIN public."DimCategory" ca
+ON f.categoryid = ca.categoryid
+GROUP BY GROUPING SETS (
+    (co.country, ca.category),  -- both together
+    (co.country),               -- country only
+    (ca.category),              -- category only
+    ()                          -- grand total
+) LIMIT 5;
+
+"""Second is a ROLLUP"""
+SELECT co.country, d.year, SUM(f.amount) AS totalsales 
+FROM public."FactSales" f
+JOIN public."DimCountry" co
+ON f.countryid = co.countryid
+JOIN public."DimDate" d
+ON f.dateid = d.dateid
+GROUP BY ROLLUP (
+    co.country, d.year
+) LIMIT 5;
+
+"""Third is a Cube query"""
+SELECT co.country, d.year, AVG(f.amount) AS averagesales
+FROM public."FactSales" f 
+JOIN public."DimCountry" co
+ON f.countryid = co.countryid 
+JOIN public."DimDate" d 
+ON f.dateid = d.dateid 
+GROUP BY CUBE ( 
+    co.country, d.year 
+) LIMIT 5;
+
+"""Finally i created a materialised view called total_sales_per_country"""
+CREATE MATERIALIZED VIEW total_sales_per_country (country,total_sales) AS
+(SELECT 
+	c.country, 
+	SUM(f.amount) AS total_sales
+FROM public."FactSales" f
+JOIN public."DimCountry" c
+	ON f.countryid = c.countryid
+GROUP BY country) 
