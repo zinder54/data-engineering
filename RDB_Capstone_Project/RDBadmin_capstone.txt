@@ -172,3 +172,9 @@ FROM public."FactSales" f
 JOIN public."DimCountry" c
 	ON f.countryid = c.countryid
 GROUP BY country) 
+
+"""next was the ETL module of the capstone project
+first we created a MySQL database called sales. then we created a py file to connect
+and add to the sales DB with product table and some data."""
+these files can be found in the ETL_Capstone_project folder. each name for the softeware they use.
+automation.py is the fnal etl file for this part of the module
