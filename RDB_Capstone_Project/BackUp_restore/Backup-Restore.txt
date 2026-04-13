@@ -1,0 +1,23 @@
+this file contains the MySQL commands used to create database, sales, use .sql file to create tables and rows
+then back up FactSales and also restore the table from the .sql file.
+
+create database
+mysql -u root -p -h 172.21.74.38 -P 3306 -e "CREATE DATABASE sales;"
+
+input tables and rows from file
+mysql -u root -p -h 172.21.74.38 -P 3306 sales < database_create_load.sql
+
+create backup
+mysqldump -u root -p -h 172.21.74.38 -P 3306 sales FactSales > sales_backup.sql
+
+drop FactSales table
+mysql -u root -p -h 172.21.74.38 -P 3306 -D sales -e "DROP TABLE FactSales;"
+
+show tables
+mysql -u root -p -h 172.21.74.38 -P 3306 -D sales -e "SHOW TABLES;"
+
+restore from backup file
+mysql -u root -p -h 172.21.74.38 -P 3306 sales < sales_backup.sql
+
+.my.cnf file
+user=root password="*" 

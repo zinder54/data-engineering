@@ -1,0 +1,19 @@
+below are the commands i used to trigger and unpause the dag.
+and their outputs.
+
+theia@theiadocker-zinderab:/home/project$ airflow dags trigger process_web_log
+/
+     |            |            |            |            |          |            | last_sche |            |          |           |       
+     |            |            | data_inter | data_inter |          | external_t | duling_de | logical_da |          | start_dat |       
+conf | dag_id     | dag_run_id | val_start  | val_end    | end_date | rigger     | cision    | te         | run_type | e         | state 
+=====+============+============+============+============+==========+============+===========+============+==========+===========+=======
+{}   | process_we | manual__20 | 2026-04-07 | 2026-04-08 | None     | True       | None      | 2026-04-08 | manual   | None      | queued
+     | b_log      | 26-04-08T1 | 19:16:29+0 | 19:16:29+0 |          |            |           | 19:16:29+0 |          |           |       
+     |            | 9:16:29+00 | 0:00       | 0:00       |          |            |           | 0:00       |          |           |       
+     |            | :00        |            |            |          |            |           |            |          |           |       
+                                                                                                                                         
+
+theia@theiadocker-zinderab:/home/project$ airflow dags unpause process_web_log
+dag_id          | is_paused
+================+==========
+process_web_log | False    
