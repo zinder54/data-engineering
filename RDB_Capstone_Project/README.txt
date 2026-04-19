@@ -6,4 +6,5 @@ module order:
 data Platform Architecture and OLTP database - Folder OLTP_Database
 Building a data Warehouse - Folder Data Warehouse 
 ETL and Data pipelines Folder ETL_capstone_module & ETL_AIRFLOW
-Backup, restore and automation Folder BackUp_restore
+Backup, restore Folder BackUp_restore
+backup, restore automation Folder backup_restore_automation
