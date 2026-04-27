@@ -92,7 +92,7 @@ Schema, using Phpadmin for postgresSQL"""
 
 '''Following this we uploaded data into the database to be queried'''
 """The first query is a GROUPING SETS query"""
-SELECT co.country, ca.category, SUM(f.amount) AS totalsales 
+SELECT co.country, ca.category, SUM(f.amount) AS total_sales 
 FROM public."FactSales" f
 JOIN public."DimCountry" co
 ON f.countryid = co.countryid
@@ -106,7 +106,7 @@ GROUP BY GROUPING SETS (
 ) LIMIT 5;
 
 """Second is a ROLLUP"""
-SELECT co.country, d.year, SUM(f.amount) AS totalsales 
+SELECT co.country, d.year, SUM(f.amount) AS total_sales 
 FROM public."FactSales" f
 JOIN public."DimCountry" co
 ON f.countryid = co.countryid
@@ -117,7 +117,7 @@ GROUP BY ROLLUP (
 ) LIMIT 5;
 
 """Third is a Cube query"""
-SELECT co.country, d.year, AVG(f.amount) AS averagesales
+SELECT co.country, d.year, AVG(f.amount) AS average_sales
 FROM public."FactSales" f 
 JOIN public."DimCountry" co
 ON f.countryid = co.countryid 
@@ -135,4 +135,4 @@ CREATE MATERIALIZED VIEW total_sales_per_country (country,total_sales) AS
 FROM public."FactSales" f
 JOIN public."DimCountry" c
 	ON f.countryid = c.countryid
-GROUP BY country) 
+GROUP BY country);

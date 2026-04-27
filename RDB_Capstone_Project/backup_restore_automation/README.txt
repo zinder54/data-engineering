@@ -57,6 +57,7 @@ gunzip /home/theia/backups/backup_sales_19-04-2026_15-39-01.gz
 
 --- i used the below command to restore the sales database from the back up file
 SOURCE /home/theia/backups/backup_sales_19-04-2026_15-39-01;
+--- mysql sales < backup_sales_19-04-2026_15-39-01.sql;
 
 --- and finally i used the below to make sure the restore was succesful using mysql cli
  SELECT * FROM DimDate LIMIT 1O;

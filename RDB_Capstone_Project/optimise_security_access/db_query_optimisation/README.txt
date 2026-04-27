@@ -16,7 +16,7 @@ SELECT * FROM FactSales WHERE countryid = 50
     EXPLAIN SELECT * FROM FactSales WHERE countryid = 50
 
 ---created index on countryid
-CREATE INDEX idx_country ON FactSales(countryid);
+CREATE INDEX country_id ON FactSales(countryid);
     ---then viewed the index
     SHOW INDEX FROM FactSales;
 

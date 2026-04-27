@@ -108,18 +108,28 @@ def get_latest_records(rowid):
     )
 
     latest_records = cursor.fetchall()
+    # Get new max rowid if records exist
+    if latest_records:
+        new_last_row_id = max(row[0] for row in latest_records)  # assumes rowid is first column
+    else:
+        new_last_row_id = rowid
+
     print("New rows:", len(latest_records))
     print(latest_records[:5])  # preview first few rows
     cursor.close()
-    return latest_records
+    return latest_records, new_last_row_id
 
 new_records = get_latest_records(last_row_id)
 
 print("New rows on staging datawarehouse = ", len(new_records))
+print("Latest row_id now =", last_row_id)
 
 def insert_records_pg(records):
     #Create a cursor onject using cursor() method
     cursor = conn.cursor()
+
+    # records should be a list of tuples like:
+    # [(rowid, product_id, customer_id, quantity), ...]
     SQL = """
     INSERT INTO public.sales_data (rowid, product_id, customer_id, quantity)
     VALUES (%s, %s, %s, %s)

@@ -1,6 +1,6 @@
 
 # used the below command to download the source file for the following ETL process
-#wget -O /home/project/airflow/dags/capstone/accesslog.txt https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0321EN-SkillsNetwork/ETL/accesslog.txt
+#wget -O /home/project/airflow/dags/accesslog.txt https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0321EN-SkillsNetwork/ETL/accesslog.txt
 
 #import relevant modules
 from datetime import timedelta, datetime
@@ -12,7 +12,7 @@ import tarfile
 default_args = {
     'owner':'alex',
     'start_date':datetime(2024,1,1),
-    'email':'someone@email.com',
+    'email':['someone@email.com'],
     "retries": 2,
     "retry_delay": timedelta(minutes=5),
     "email_on_failure": True,
@@ -41,7 +41,7 @@ def transform_data():
     skip_ip = "198.46.149.143"
 
     with open("/home/project/airflow/dags/extracted_data.txt",'r')as f, \
-        open("/home/project/airflow/dags/transform_data.txt",'w') as wf:
+        open("/home/project/airflow/dags/transformed_data.txt",'w') as wf:
         
         for line in f:
             ip = line.strip()
@@ -50,11 +50,11 @@ def transform_data():
 
 #load data function
 def load_data():
-    transform_file = "/home/project/airflow/dags/transform_data.txt"
+    transform_file = "/home/project/airflow/dags/transformed_data.txt"
     tar_file = "/home/project/airflow/dags/weblog.tar"
 
     with tarfile.open(tar_file,'w') as tar:
-        tar.add(transform_file, arcname="transform_data.txt")
+        tar.add(transform_file, arcname="transformed_data.txt")
 
 #dag task creation
 execute_extract_data = PythonOperator(

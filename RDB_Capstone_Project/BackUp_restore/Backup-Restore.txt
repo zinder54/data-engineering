@@ -9,6 +9,8 @@ mysql -u root -p -h 172.21.74.38 -P 3306 sales < database_create_load.sql
 
 create backup
 mysqldump -u root -p -h 172.21.74.38 -P 3306 sales FactSales > sales_backup.sql
+--- Backup FactSales table from sales database (prompts for password)
+mysqldump -u root -p -h 172.21.74.38 -P 3306 sales FactSales > sales_backup.sql
 
 drop FactSales table
 mysql -u root -p -h 172.21.74.38 -P 3306 -D sales -e "DROP TABLE FactSales;"
@@ -17,6 +19,8 @@ show tables
 mysql -u root -p -h 172.21.74.38 -P 3306 -D sales -e "SHOW TABLES;"
 
 restore from backup file
+mysql -u root -p -h 172.21.74.38 -P 3306 sales < sales_backup.sql
+--- Restore FactSales table from backup file (will prompt for password)
 mysql -u root -p -h 172.21.74.38 -P 3306 sales < sales_backup.sql
 
 .my.cnf file

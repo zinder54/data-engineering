@@ -23,10 +23,10 @@ SELECT SHA2('sales info encryption', 256);
 | e7826d5764b270b972617204cfe9331ab7d93968f16bb55bead11a3df3fb0128 |
 
 --- i then altered the amount column to be a variable binary column 
-ALTER TABLE FactSales MODIFY amount VARBINARY(32);
+ALTER TABLE FactSales MODIFY amount VARBINARY(255);
 
 ---i then Encrypted the column using the passphrase from above
-UPDATE FactSales SET amount = AES_ENCRYPT(amount, SHA2('sales info encryption', 256));
+UPDATE FactSales SET amount = AES_ENCRYPT(amount, SHA2('sales info encryption', 255));
 
 --- i then queried the data to get the first 5 rows to show the encryption
 SELECT * FROM FactSales LIMIT 5;
