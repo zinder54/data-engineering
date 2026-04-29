@@ -1,0 +1,54 @@
+In this file contains the terminal commands for the practice project within the linux commands and 
+shell scripting module. this is all part of the data engineering coursera course.
+
+--- first i created a log file usig the below terminal command
+touch rx_poc.log
+
+--- then i created the headers within the log
+header=$(echo -e "year\tmonth\tdat\tobs_temp\ttfc_temp") echo "$header" > rx_poc.log
+
+--- i then created an sh file and made it executable (can be found in this folder called rx_poc.sh)
+touch rx_poc.sh 
+---within which i entered the shebang at the top of the file 
+#! /bin/bash
+--- made it executable
+chmod u+x rx_poc.sh
+
+--- i then assigned Casablanca to the city variable
+city=Casablanca
+
+--- i then used the following command to extract the data into a file
+curl -s wttr.in/$city?T --output weather_report
+
+--- i then added to the file a pipeline to get the city temp data, and extract the first temp.
+obs_temp=$(curl -s wttr.in/$city?T | grep -m 1 '°.' | grep -Eo -e '-?[[:digit:]].*')
+
+--- i then added this to print the temp to the terminal
+echo "The current Temperature of $city: $obs_temp"
+
+--- i then used the following command, this command is specific to this file and is a bit fragile
+and non dynamic.
+fc_temp=$(curl -s wttr.in/$city?T | head -23 | tail -1 | grep '°.' | cut -d 'C' -f2 | grep -Eo -e '-?[[:digit:]].*')
+echo "The forecasted temperature for noon tomorrow for $city : $fc_temp C"
+
+--- i then added created a timezone variable for Casablanca and got the local date
+TZ='Africa/Casablanca'
+read year month day <<< "(TZ="TZ" date +'%y %m %d')"
+
+--- next i used the data extracted above to create a tab de-limited record of data for the log file
+record=$(echo -e "$year\t$m\t$day\t$obs_temp\t$fc_temp C")
+echo "$record">>rx_poc.log
+
+--- next i scheduled the tasks within crontab for 6 am every day
+crontab -e
+    0 6 0 0 0 /home/project/rx_poc.sh
+
+--- after this i created a tsv file to store historic temps
+touch historical_fc_accuracy.tsv
+    echo -e "year\tmonth\tday\tobs_temp\tfc_temp\taccuracy\taccuracy_range" > historical_fc_accuracy.tsv
+
+
+
+
+
+
